@@ -1,0 +1,11 @@
+@media screen { body { margin: 0; padding: 0; font-size: 100%; }
+  h1, h2, h3, h4 { font-weight: normal; }
+  ul, li { margin: 0; padding: 0; list-style: none; }
+  /* Image replacement */
+  /* Clear Fix */ }
+@media print { body { font-size: 12pt; line-height: 1.25; }
+  h1 { font-size: 36pt; line-height: 1.25; }
+  h2 { font-size: 24pt; line-height: 1.25; }
+  h3 { font-size: 18pt; line-height: 1.25; }
+  h4 { font-size: 14pt; line-height: 1.25; }
+  blockquote { font-size: 24pt; line-height: 1.45833333; } }
