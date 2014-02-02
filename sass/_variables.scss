@@ -22,13 +22,13 @@ $sky: #34599d;
 $sapphire: #1954c0;
 $pelagic: #071933;
 
-$color-link-alt: $sky;
-$color-linkVisited-alt: darken($amethyst, 10%);
-$color-linkActivated-alt: $sapphire;
+$color-link-alt: lighten($sapphire, 25%);
+$color-linkVisited-alt: lighten($amethyst, 25%);
+$color-linkActivated-alt: lighten($sapphire, 35%);
 
-$color-link: lighten($sapphire, 25%);
-$color-linkVisited: lighten($amethyst, 25%);
-$color-linkActivated: lighten($sapphire, 35%);
+$color-link: $sky;
+$color-linkVisited: darken($amethyst, 10%);
+$color-linkActivated: $sapphire;
 
 $color-canvas: $tin;
 $color-text: darken($gunmetal, 15%);

@@ -3,6 +3,12 @@ body {
   color: $color-text;
 }
 
+a {
+  &:link { color: $color-link }
+  &:visited { color: $color-linkVisited }
+  &:hover, &:active, &:focus { color: $color-linkActivated }
+}
+
 .page1 {
   @include background(
     image-url("bg-wash-topMiddle.png") center 0 no-repeat,
@@ -15,11 +21,6 @@ body {
   @extend %pagecontents;
   @extend %clearfix;
   @include padding-trailer(2);
-  a {
-    &:link { color: $color-link-alt }
-    &:visited { color: $color-linkVisited-alt }
-    &:hover, &:active, &:focus { color: $color-linkActivated-alt }
-  }
 }
 
 .photo {
@@ -81,7 +82,9 @@ dt { @extend %visuallyhidden;}
 .gallery {
   z-index: 3;
   a {
-    &:visited { color: $color-linkActivated }
+    &:link { color: $color-link-alt}
+    &:visited { color: $color-linkVisited-alt }
+    &:hover, &:active, &:focus { color: $color-linkActivated-alt }
   }
 }
 /* The contactery */

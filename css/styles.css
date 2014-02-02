@@ -34,18 +34,20 @@
   .gallery a { display: block; width: 100%; height: 100%; }
   .gallery a:hover span, .gallery a:active span, .gallery a:focus span { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
   body { background: #c4c5ca; color: #4e4b50; }
+  a:link { color: #34599d; }
+  a:visited { color: #57276d; }
+  a:hover, a:active, a:focus { color: #1954c0; }
   .page1 { background: url('/img/bg-wash-topMiddle.png?1391303173') center 0 no-repeat, url('/img/bg-wash-topLeft.png?1391303136') 0 0 no-repeat, url('/img/bg-wash-topRight.png?1391303217') 100% 0 no-repeat; }
   .title-card { padding-bottom: 2.66667rem; }
-  .title-card a:link { color: #34599d; }
-  .title-card a:visited { color: #57276d; }
-  .title-card a:hover, .title-card a:active, .title-card a:focus { color: #1954c0; }
   .photo { background: #2d0d3c url('/img/mask_rachelnabors.png?1391303350') center center no-repeat; height: 8rem; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; }
   .masthead { position: relative; max-width: 600px; margin: 2.66667rem auto 1.33333rem; }
   .logo { background: url('/img/logo-text.png?1391303262') 0 0 no-repeat; -moz-background-size: 100% auto; -o-background-size: 100% auto; -webkit-background-size: 100% auto; background-size: 100% auto; margin: 0 auto; position: absolute; top: 0; left: 50%; -moz-transform: translate(-50%, 121%); -ms-transform: translate(-50%, 121%); -o-transform: translate(-50%, 121%); -webkit-transform: translate(-50%, 121%); transform: translate(-50%, 121%); padding-top: 17.83333%; width: 100%; }
   .mascot { display: block; width: 45.5%; -moz-transform: translate(60%, 0); -ms-transform: translate(60%, 0); -o-transform: translate(60%, 0); -webkit-transform: translate(60%, 0); transform: translate(60%, 0); }
   /* The Gallery */
   .gallery { z-index: 3; }
-  .gallery a:visited { color: #9ab9f2; }
+  .gallery a:link { color: #6d9aec; }
+  .gallery a:visited { color: #b377cf; }
+  .gallery a:hover, .gallery a:active, .gallery a:focus { color: #9ab9f2; }
   /* The contactery */
   #skrollr-body { overflow: hidden; }
   .page3 { position: relative; padding-top: 250px; width: 100%; }
@@ -63,7 +65,7 @@
   .contact { position: absolute; left: 50%; top: 0; -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); width: 800px; z-index: 20; }
   .contact .email { position: absolute; top: 0; left: 33.125%; width: 22.5%; padding-top: 19.25%; }
   .contact .messenger-magpie { background: url('/img/magpie-messenger.png?1391303314'); -moz-background-size: 100% auto; -o-background-size: 100% auto; -webkit-background-size: 100% auto; background-size: 100% auto; padding-top: 77.375%; }
-  .contact .twitter { background: url('/img/i-twitter.png?1391312753'); -moz-background-size: 100% auto; -o-background-size: 100% auto; -webkit-background-size: 100% auto; background-size: 100% auto; position: absolute; top: 9%; left: 58%; width: 9.375%; padding-top: 11.5%; max-width: 200px; z-index: 11; } }
+  .contact .twitter { background: url('/img/i-twitter.png?1391314502'); -moz-background-size: 100% auto; -o-background-size: 100% auto; -webkit-background-size: 100% auto; background-size: 100% auto; position: absolute; top: 9%; left: 58%; width: 9.375%; padding-top: 11.5%; max-width: 200px; z-index: 11; } }
 @media screen and (min-width: 43.75em) { cite { text-align: right; } }
 
 @media screen and (min-width: 56.25em) { dl { font-size: 1.33333rem; line-height: 2rem; } }
