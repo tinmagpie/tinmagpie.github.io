@@ -82,8 +82,7 @@ dt { @extend %visuallyhidden;}
 .gallery {
   z-index: 3;
   a {
-    &:link { color: $color-link-alt}
-    &:visited { color: $color-linkVisited-alt }
+    &:link, &:visited { color: $color-link-alt}
     &:hover, &:active, &:focus { color: $color-linkActivated-alt }
   }
 }

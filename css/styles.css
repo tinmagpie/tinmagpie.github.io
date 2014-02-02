@@ -45,8 +45,7 @@
   .mascot { display: block; width: 45.5%; -moz-transform: translate(60%, 0); -ms-transform: translate(60%, 0); -o-transform: translate(60%, 0); -webkit-transform: translate(60%, 0); transform: translate(60%, 0); }
   /* The Gallery */
   .gallery { z-index: 3; }
-  .gallery a:link { color: #6d9aec; }
-  .gallery a:visited { color: #b377cf; }
+  .gallery a:link, .gallery a:visited { color: #6d9aec; }
   .gallery a:hover, .gallery a:active, .gallery a:focus { color: #9ab9f2; }
   /* The contactery */
   #skrollr-body { overflow: hidden; }
