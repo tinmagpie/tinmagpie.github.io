@@ -12,6 +12,8 @@
   dt { position: absolute; overflow: hidden; clip: rect(0 0 0 0); height: 1px; width: 1px; margin: -1px; padding: 0; border: 0; }
   html { font-size: 112.5%; line-height: 1.33333em; }
   body, h1, h2, h3, h4, h5, h6 { font-size-adjust: 0.5; }
+  .js h1, .js h2, .js p, .js blockquote, .js cite, .js dl { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 1s ease-in; -o-transition: opacity 1s ease-in; -webkit-transition: opacity 1s ease-in; transition: opacity 1s ease-in; }
+  .fontsLoaded h1, .fontsLoaded h2, .fontsLoaded p, .fontsLoaded blockquote, .fontsLoaded cite, .fontsLoaded dl, .fontsNotLoaded h1, .fontsNotLoaded h2, .fontsNotLoaded p, .fontsNotLoaded blockquote, .fontsNotLoaded cite, .fontsNotLoaded dl { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
   .page { font-size: 1rem; font-family: "prenton", sans-serif; font-weight: 400; }
   blockquote { font-size: 1.33333rem; line-height: 2rem; color: #747681; position: relative; text-indent: 1.25em; font-weight: 300; margin-bottom: 1.33333rem; }
   blockquote:before { font-size: 2.66667rem; line-height: 2rem; display: block; content: "\201C"; position: absolute; left: -.625em; top: 0; color: #a9abb2; }

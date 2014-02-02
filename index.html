@@ -41,9 +41,23 @@
 			ga('create', 'UA-3631048-7', 'tinmagpie.com');
 			ga('send', 'pageview');
 		</script>
+        <script src="js/skrollr-0.6.21.min.js"></script>
         <script type="text/javascript" src="//use.typekit.net/cxy4dvz.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript">
 
+            try{
+                Typekit.load({
+                    active: function() {
+                        document.body.classList.add('fontsLoaded');
+                        var s = skrollr.init();
+                    },
+                    inactive: function() {
+                        document.body.classList.add('fontsNotLoaded');
+                        var s = skrollr.init();
+                    }
+                })
+            }catch(e){}
+        </script>
 
     </head>
     <body>
@@ -124,12 +138,5 @@
                 </div>
             </div>
         </div>
-        <script src="js/skrollr-0.6.21.min.js"></script>
-        <script>
-
-            var s = skrollr.init([
-                forceHeight=false
-            ]);
-        </script>
     </body>
 </html>

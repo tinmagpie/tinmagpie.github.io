@@ -87,7 +87,9 @@ dt { @extend %visuallyhidden;}
   }
 }
 /* The contactery */
-#skrollr-body { overflow: hidden;}
+#skrollr-body { 
+  overflow: hidden;
+}
 
 .page3 {
   position: relative;
