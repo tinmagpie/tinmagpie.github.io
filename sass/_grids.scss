@@ -1,0 +1,149 @@
+//Grids
+@include add-gutter(1/6);
+@include add-grid(9);
+@include add-gutter-style(split);
+
+// @include add-grid(5 at $window-width-med);
+// $grids: add-grid(12 at 700px);
+// $grids: add-grid(2 8 2 at 900px);
+// $grids: add-grid(1 3 5 7 9 at 1100px);
+$include-border-box: true; //unless I change box-sizing of all w/
+// * {
+//   @include box-sizing('border-box');
+// }
+
+.page1 {
+  padding: .5em .5em 2em;
+  @include box-sizing(border-box);
+  width: 100%; 
+  // @include background-grid($color: blue);
+  @include breakpoint($window-width-med) {
+    padding: 1em
+  }
+}
+
+%pagecontents {
+  margin: 0 auto;
+  max-width: $window-width-lrg;
+}
+
+.what-we-are{
+  @include grid-span(7, 2); 
+  clear: both;
+  @include breakpoint($window-width-med) {
+    @include grid-span(4, 2);
+  }
+  // @include breakpoint($window-width-lrg) {
+  //   @include grid-span(4, 2);
+  // }
+}
+
+.the-story { 
+  @include grid-span(7, 2); 
+  clear: both;
+  @include layout(7) {
+    cite {
+      @include grid-span(5, 2);        
+    }
+  }
+  @include breakpoint($window-width-med) {
+    @include grid-span(3,6);
+    @include layout(3) {
+      blockquote {
+        @include grid-span(3, 1);
+      }
+      .photo {
+        @include grid-span(1, 3);
+        clear: both;
+      }
+      cite {
+        @include grid-span(2, 2);        
+      }
+    }
+  }
+  @include breakpoint($window-width-lrg) {
+    @include grid-span(3, 6); 
+  }
+}
+
+.page2{
+  padding: .5em;
+  margin-bottom: -50px;
+  @include box-sizing(border-box);
+}
+
+.gallery {
+  @extend %clearfix;
+  @include breakpoint($gallery-pics) {
+    @include layout(2) {
+      li {
+        height: rhythm(6);
+        &:nth-child(odd){
+          @include grid-span(1, 1);
+          clear:both
+        }
+        &:nth-child(even){
+          @include grid-span(1, 2);
+        }
+      }
+    }
+  }
+  @include breakpoint($window-width-lrg) {
+    @include layout(4){
+      @include add-gutter(1/8);
+      li {
+        &:nth-child(n+1){
+          @include grid-span(1, 1);
+          clear:both
+        }
+        &:nth-child(2n){
+          @include grid-span(1, 2);
+        }
+        &:nth-child(3n){
+          @include grid-span(1, 3);
+        }
+        &:nth-child(4n){
+          @include grid-span(1, 4);
+        }
+      }
+    }
+  }
+  li {
+    $background: $pelagic;
+    @include grid-span(9, 1);
+    @include margin-trailer();
+    height: rhythm(8);
+    overflow: hidden;
+    position:relative;
+    // &:nth-child(4n) {
+    //   @include grid-span(9, 1); 
+    // }
+  }
+  img {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 100%;
+    @include translate(-50%, -50%);
+    z-index: 1;
+  }
+  span {
+    @include opacity(0);
+    background: rgba($sky, .85);
+    display:block;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 2;
+    width: 100%; height:100%;
+    @include box-sizing(border-box);
+    padding: rhythm();
+    @include transition(opacity 1s ease-out)
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  a:hover, a:active, a:focus {
+    span {@include opacity(1)}
+  }
+}

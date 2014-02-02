@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'sass'
-gem 'compass', "0.13.alpha.4"
+gem 'compass'
+gem 'singularitygs', '~>1.2.0.rc.3'
 gem 'rb-fsevent'
-gem 'breakpoint'
+gem 'breakpoint', '~>2.4.0'
 gem 'oily_png'

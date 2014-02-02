@@ -1,5 +1,6 @@
 /* Image replacement */
 %ir {
+  display: block; height: 0; // height: 0 cuz we use padding-top for proportionalism
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -15,4 +16,13 @@
 
 %clearfix:after {
     clear: both;
+}
+
+/* Hide for all but screen readers */
+%visuallyhidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
 }

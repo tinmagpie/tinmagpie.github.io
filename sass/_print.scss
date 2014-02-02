@@ -4,7 +4,7 @@
     font-size: 12pt;
     line-height: 1.25;
   }
-
+  
   h1 {
     font-size: 36pt;
     // 2x body copy size = 32px 
@@ -30,5 +30,20 @@
   blockquote {
     font-size: 24pt;
     line-height: 1.45833333;
+  }
+
+  cite {
+    margin-top: -1em;
+    &:before {
+      content: "\2014 \2009";
+    }
+  }
+  
+  img {display: none}
+
+  a { text-decoration: none; }
+  a:after{
+    content:" (" attr(href) ") ";font-size:0.8em;font-weight:normal;
+    text-decoration: underline;
   }
 }

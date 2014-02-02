@@ -1,9 +1,11 @@
 @import "compass/support";
 @import "compass/css3/"; 
-// @import "compass/utilities/sprites";
+@import "singularitygs";
 
 // media queries w/ Breakpoint
-// @import "breakpoint";
+@import "breakpoint";
+
+// @import "compass/utilities/sprites";
 
 @media screen {
 	// Remove unwanted browser default stylin's on body, etc.
@@ -15,7 +17,9 @@
 	@import "extends";
 
 	// General styles for background + shared styles for universal elements. 
-	// @import "foundation";
+	@import "typography";
+	@import "grids";
+	@import "foundation";
 
 }
 

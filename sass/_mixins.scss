@@ -1,0 +1,6 @@
+/* Responsive and proportional dimensions for use w/ %ir */
+@mixin set-dimensions($width, $height, $parent-width: 100%) {
+	width: percentage($width/$parent-width);
+	padding-top: percentage($height/$parent-width);
+	height: 0;
+}

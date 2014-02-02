@@ -1,0 +1,182 @@
+body { 
+  background: $color-canvas;
+  color: $color-text;
+}
+
+a {
+  &:link { color: $color-link }
+  &:visited { color: $color-linkVisited }
+  &:hover, &:active, &:focus { color: $color-linkActivated }
+}
+
+.page1 {
+  @include background(
+    image-url("bg-wash-topMiddle.png") center 0 no-repeat,
+    image-url("bg-wash-topLeft.png") 0 0 no-repeat,
+    image-url("bg-wash-topRight.png") 100% 0 no-repeat,
+    $tin
+  );
+  color: $color-title-text;
+}
+
+.title-card {
+  @extend %pagecontents;
+  @extend %clearfix;
+  @include padding-trailer(2);
+  a {
+    &:link { color: $color-link-alt }
+    &:visited { color: $color-linkVisited-alt }
+    &:hover, &:active, &:focus { color: $color-linkActivated-alt }
+  }
+}
+
+.photo {
+  background: $grape image-url("mask_rachelnabors.png") center center no-repeat;
+  height: rhythm(6);
+  @include background-size(cover);
+}
+
+.page2 {
+  // height: 100%;
+  // position: fixed;
+  // top: 0; left: 0;
+  // z-index: 1;  
+}
+.about {
+  @extend %pagecontents;
+}
+
+$masthead-width: 600px;
+.masthead {
+  position: relative;
+  $masthead-height: 276px; //410px;
+  max-width: $masthead-width;
+  margin: rhythm(2) auto rhythm(1);
+  @include breakpoint($window-width-med) {
+    margin: 4em auto;
+  }
+}
+
+$logo-width: 600px;
+$logo-height: 107px;
+.logo {
+  @extend %ir;
+  @include background(image-url("logo-text.png") 0 0 no-repeat);
+  @include background-size(100% auto);
+  margin: 0 auto;
+  position: absolute;
+  top: 0; left:50%;
+  @include translate(-50%, 121%);
+  padding-top: percentage($logo-height/$masthead-width);
+  width: percentage($logo-width/$masthead-width);
+  @include breakpoint(min-width $masthead-width) {
+    $logo-width: 400px;
+    $logo-height: 71px;
+    width: $logo-width;
+    padding-top: $logo-height;
+    @include translate(-50%, 142%);
+  }
+}
+
+.mascot {
+  $mascot-width: 273px;
+  display: block;
+  width: percentage($mascot-width/$masthead-width);
+  @include translate(60%, 0);
+  @include breakpoint(min-width $masthead-width) {
+    $mascot-width: 211px;
+    width: $mascot-width;
+    @include translate(99%, 0);
+  }
+}
+dt { @extend %visuallyhidden;}
+
+/* The Gallery */
+.gallery {
+  a {
+    &:visited { color: $color-linkActivated }
+  }
+}
+/* The contactery */
+.page3 {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  height: 250px;
+  width: 100%;
+  @include breakpoint($window-width-med) {
+    height: 400px;
+  }
+  .magpie {
+    position: absolute;
+    top: 0; left: 0;
+    img { width: 100%; height: auto;}    
+  }
+  .magpie1 {
+    width: 40%;
+    left: 2%;
+    top: 164%;
+    z-index: 1;
+  }
+  .magpie2 {
+    width: 49%;
+    left: 66%;
+    top: 77%;
+  }
+  .magpie3 {
+    width: 43%;
+    left: 55%;
+    top: 95%;
+  }
+  .magpie4 {
+    width: 32%;
+    left: 67%;
+    top: 36%;
+    z-index: 1;
+  }
+  .magpie5 {
+    width: 80%;
+    left: -30%;
+    top: 307%;
+  }
+  .magpie6 {
+    width: 40%;
+    left: -18%;
+    top: 255%;
+  }
+  .magpie7 {
+    width: 87%;
+    left: 50%; top: 180%;
+  }
+}
+
+.contact {
+  $birdWidth: 800px;
+  position:absolute;
+  left: 50%; top: 0;
+  @include translate(-50%, 0);
+  width: $birdWidth; 
+  z-index: 2;
+  .email {
+    @extend %ir;
+    position:absolute;
+    top: 0; left: percentage(265px/$birdWidth);
+    width: percentage(180px/800px); padding-top: percentage(154px/800px);
+  }
+  .messenger-magpie {
+    @include background(image-url("magpie-messenger.png"));
+    @include background-size(100% auto);
+    padding-top: percentage(619px/$birdWidth);
+  }
+  .twitter {
+    @extend %ir;
+    @include background(image-url("i-twitter.png"));
+    @include background-size(100% auto);
+    position:absolute;
+    top: 9%; left: 58%;
+    width: percentage(75px/$birdWidth); padding-top: percentage(90px/$birdWidth);
+    max-width: 200px; 
+    z-index: 11;
+  }
+
+}

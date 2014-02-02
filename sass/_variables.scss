@@ -1,10 +1,48 @@
-//Measurements
+//Media Query Measures
 $window-width-med: 43.75em;
 $window-width-lrg: 56.25em;
+$gallery-pics: 500px;
+$hidpi: min-resolution 1.5dppx;
+$cross-reso: max-resolution 143dpi;
+
 
 //Easing
 
 //Colors
+// warm purples
+$mauve: #615368;
+$grape: #2d0d3c;
+$amethyst: #753493;
+// neutral greys
+$gunmetal: #747078;
+$tin: #c4c5ca;
+// cool blues
+$jay: #646d97;
+$sky: #34599d;
+$sapphire: #1954c0;
+$pelagic: #071933;
+
+$color-link-alt: $sky;
+$color-linkVisited-alt: darken($amethyst, 10%);
+$color-linkActivated-alt: $sapphire;
+
+$color-link: lighten($sapphire, 25%);
+$color-linkVisited: lighten($amethyst, 25%);
+$color-linkActivated: lighten($sapphire, 35%);
+
+$color-canvas: $mauve;
+$color-text: $tin;
+
+$color-title-text: darken($gunmetal, 15%);
+$color-title-canvas: $tin;
 
 //Fonts
-$font-regular: 'Georgia', sans-serif;
+$font-georgia: 'Georgia', serif;
+$font-prenton: 'prenton', sans-serif;
+$font-prenton-condensed: 'prenton-condensed', sans-serif; // use only w/ bolc
+$font-weight-light: 300;
+
+$font-weight-bold: 700;
+
+$font-accent: $font-georgia;
+$font-regular: $font-prenton;
