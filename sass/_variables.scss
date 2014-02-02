@@ -30,11 +30,8 @@ $color-link: lighten($sapphire, 25%);
 $color-linkVisited: lighten($amethyst, 25%);
 $color-linkActivated: lighten($sapphire, 35%);
 
-$color-canvas: $mauve;
-$color-text: $tin;
-
-$color-title-text: darken($gunmetal, 15%);
-$color-title-canvas: $tin;
+$color-canvas: $tin;
+$color-text: darken($gunmetal, 15%);
 
 //Fonts
 $font-georgia: 'Georgia', serif;

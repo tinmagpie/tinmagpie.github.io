@@ -3,20 +3,12 @@ body {
   color: $color-text;
 }
 
-a {
-  &:link { color: $color-link }
-  &:visited { color: $color-linkVisited }
-  &:hover, &:active, &:focus { color: $color-linkActivated }
-}
-
 .page1 {
   @include background(
     image-url("bg-wash-topMiddle.png") center 0 no-repeat,
     image-url("bg-wash-topLeft.png") 0 0 no-repeat,
-    image-url("bg-wash-topRight.png") 100% 0 no-repeat,
-    $tin
+    image-url("bg-wash-topRight.png") 100% 0 no-repeat
   );
-  color: $color-title-text;
 }
 
 .title-card {
@@ -36,12 +28,6 @@ a {
   @include background-size(cover);
 }
 
-.page2 {
-  // height: 100%;
-  // position: fixed;
-  // top: 0; left: 0;
-  // z-index: 1;  
-}
 .about {
   @extend %pagecontents;
 }
@@ -93,25 +79,29 @@ dt { @extend %visuallyhidden;}
 
 /* The Gallery */
 .gallery {
+  z-index: 3;
   a {
     &:visited { color: $color-linkActivated }
   }
 }
 /* The contactery */
+#skrollr-body { overflow: hidden;}
+
 .page3 {
   position: relative;
-  overflow: hidden;
-  z-index: 2;
-  height: 250px;
+  padding-top: 250px;
   width: 100%;
   @include breakpoint($window-width-med) {
-    height: 400px;
+    padding-top: 400px;
   }
   .magpie {
     position: absolute;
     top: 0; left: 0;
+    z-index: 2;
     img { width: 100%; height: auto;}    
   }
+  .dark {z-index:3}
+  .light {z-index:1}
   .magpie1 {
     width: 40%;
     left: 2%;
@@ -125,8 +115,9 @@ dt { @extend %visuallyhidden;}
   }
   .magpie3 {
     width: 43%;
-    left: 55%;
+    left: 15%;
     top: 95%;
+    z-index: 1;
   }
   .magpie4 {
     width: 32%;
@@ -141,7 +132,7 @@ dt { @extend %visuallyhidden;}
   }
   .magpie6 {
     width: 40%;
-    left: -18%;
+    left: -10%;
     top: 255%;
   }
   .magpie7 {
@@ -156,7 +147,7 @@ dt { @extend %visuallyhidden;}
   left: 50%; top: 0;
   @include translate(-50%, 0);
   width: $birdWidth; 
-  z-index: 2;
+  z-index: 20;
   .email {
     @extend %ir;
     position:absolute;
@@ -174,7 +165,7 @@ dt { @extend %visuallyhidden;}
     @include background-size(100% auto);
     position:absolute;
     top: 9%; left: 58%;
-    width: percentage(75px/$birdWidth); padding-top: percentage(90px/$birdWidth);
+    width: percentage(75px/$birdWidth); padding-top: percentage(92px/$birdWidth);
     max-width: 200px; 
     z-index: 11;
   }

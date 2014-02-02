@@ -24,7 +24,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 blockquote {
   @include adjust-font-size-to(24px, 3/2);
-  color: darken($color-title-canvas, 30%);
+  color: darken($color-canvas, 30%);
   position: relative;
   text-indent: 1.25em;
   font-weight: $font-weight-light;
@@ -36,7 +36,7 @@ blockquote {
     position: absolute;
     left: -.625em;
     top: 0;
-    color: darken($color-title-canvas, 10%);
+    color: darken($color-canvas, 10%);
   }
 }
 

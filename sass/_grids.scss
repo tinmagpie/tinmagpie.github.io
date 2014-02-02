@@ -68,9 +68,10 @@ $include-border-box: true; //unless I change box-sizing of all w/
 
 .page2{
   padding: .5em;
-  margin-bottom: -50px;
   @include box-sizing(border-box);
 }
+
+.page3 {  z-index: 1;}
 
 .gallery {
   @extend %clearfix;
@@ -115,16 +116,14 @@ $include-border-box: true; //unless I change box-sizing of all w/
     height: rhythm(8);
     overflow: hidden;
     position:relative;
-    // &:nth-child(4n) {
-    //   @include grid-span(9, 1); 
-    // }
+    z-index: 2;
   }
   img {
     position: absolute;
     top: 50%; left: 50%;
     width: 100%;
     @include translate(-50%, -50%);
-    z-index: 1;
+    z-index: 3;
   }
   span {
     @include opacity(0);
@@ -132,7 +131,7 @@ $include-border-box: true; //unless I change box-sizing of all w/
     display:block;
     position: absolute;
     top: 0; left: 0;
-    z-index: 2;
+    z-index: 4;
     width: 100%; height:100%;
     @include box-sizing(border-box);
     padding: rhythm();
