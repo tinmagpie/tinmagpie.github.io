@@ -13,7 +13,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 // if there's JS, don't show any text! Set it all to opacity 0
 .js {
-  h1, h2, p, blockquote, cite, dl {
+  h1, h2, h3, p, blockquote, cite, dl {
     @include opacity(0);
     @include transition(opacity 1s ease-in);
   }
@@ -21,7 +21,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 // Once the fonts are or are not loaded, fade the text in
 .fontsLoaded, .fontsNotLoaded {
-  h1, h2, p, blockquote, cite, dl {
+  h1, h2, h3, p, blockquote, cite, dl {
     @include opacity(1);
   }
 }

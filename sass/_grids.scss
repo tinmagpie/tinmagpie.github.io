@@ -67,11 +67,34 @@ $include-border-box: true; //unless I change box-sizing of all w/
 }
 
 .page2{
+  @extend %clearfix;
+  .bunny {
+    img { 
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    @include grid-span(7, 2); 
+    clear: both;
+    @include breakpoint($window-width-med) {
+      @include grid-span(3, 1);
+    }    
+  }
+  .whats-up {
+    @include grid-span(7, 2); 
+    clear: both;
+    @include breakpoint($window-width-med) {
+      @include grid-span(5, 4);
+    }
+  }
+}
+
+.page3{
   padding: .5em;
   @include box-sizing(border-box);
 }
 
-.page3 {  z-index: 1;}
+.page4 {  z-index: 1;}
 
 .gallery {
   @extend %clearfix;
