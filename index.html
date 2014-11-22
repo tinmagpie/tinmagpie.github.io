@@ -59,7 +59,9 @@
                         var s = skrollr.init();
                     }
                 })
-            }catch(e){}
+            }catch(e){
+                document.body.classList.add('fontsNotLoaded');
+            }
         </script>
 
     </head>
@@ -86,7 +88,7 @@
                     </div>
                 </div>
             </div>
- 
+
             <div class="page2 page">
                 <section class="about">
                     <h2>Our Next Big Thing</h2>
